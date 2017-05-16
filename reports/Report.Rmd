@@ -1,0 +1,42 @@
+---
+title: "Zero_Inflated_Negative_Binomial"
+author: "Rob-StLouis"
+date: "May 8, 2017"
+output: html_document
+---
+
+## Set up
+
+I performed a re-analysis of the Beaman, Duflo, Pande, and Topalova (2012) study. They exploited a natural experiment in India which reserved leadership positions for women in randomly selected villages. They were looking at whether female leaders increased the aspirations and education of adolescent females. For my VSP I explore the sensitivity of the key findings to different analysis strategies, and largely confirm the results. Consistent with the model that exposure to women in leadership positions changes beliefs, the effect of of women in leadership positions was much larger for adolescent females in families who could name the person in the leadership position. While the the data was available, the original analysis scripts were not, so all reported analyses were coded independently.
+
+## Description of the Data
+As discussed in Beaman et al. (2012), India adopted gender quotas for elected position on village councils. In West Bengal this translated to 1/3 of the chief councilor positions being reserved for women in the elections in 1998 or 2003. The chief councilor position is the highest ranking leadership position at the lowest level of government- the village council. Its terms last five years. The researchers sent interviewers into the field in 2006. Within 19 administrative blocks, 165 village councils that were eligible for the chief councilor reservation were selected (its not clear if this selection was random or exhaustive). Within councils, three villages were randomly selected, and then 15 households were selected in each village. In each household the youngest married couple was interviewed, as were all of the adolescents. This means that 7425 households were surveyed. 4725 had 2924 had at least one adolescent child, resulting in a sample of 3680 children – 1852 female. Not all of the children were of the married couple surveyed, but that was not the focus of this analysis, which is centered on the children. This data was supplemented with 1991 census data at the village level.
+
+# Description of the Analysis
+In particularly, this problem is very thorny for a few reasons. 
+
+1. First, the key dependent variable I am analyzing here: years of education completed by time of survey, has a difficulty structure- it a discrete variable with a significant inflation at zero (adolescents who are never educated), yet the non-zero component is hugely underdispersed relative to a poisson distribution.  
+
+2. While there are 3680 observations, the randomization happend at the village block level. There are only 165 total blocks, and only XX in the critical twice reserved condition.  So the we actually have a very small degree of exogenous randomization, or relatively small effective sample size,  meaning maximizing power is critically important.
+
+3. The data have a complex heirarchical structure, with adolescents sampled withing households sampled within villages sampled within village councils sampled within administrative blocks.
+
+So this ultimately is a great use case for hieararchical Bayesian modeling. We can use mixture modeling to capture the unusual response patterns, a heirarchical structure to capture the inder-dependencies of the data, can impute the value of the missing covariates based on the other variables and ...
+
+Ok, that all is too complex, this would be 100 pages. The focus on this will just be on the mixture modeling and the change in point estimates when you move from a fixed effect to an effect that is allowed to vary across the domains.
+
+
+
+```{r setup, include=FALSE}
+library("ProjectTemplate")
+load.project()
+
+
+```
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+version: 0.7
+data_loading: FALSE
+cache_loading: TRUE
+recursive_loading: FALSE
+munging: TRUE
+logging: FALSE
+load_libraries: TRUE
+libraries:xtable, clusterSEs, dplyr, ggplot2, stringr, lubridate, tidyr,foreign,broom, lme4, magrittr, rstan,rstanarm,loo
+as_factors: FALSE
+data_tables: FALSE
+attach_internal_libraries: FALSE
