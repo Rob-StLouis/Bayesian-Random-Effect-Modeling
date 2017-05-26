@@ -122,9 +122,6 @@ generated quantities {
     
   }
   
-  for(i in 1:(NZ+NN)){
-
-  }
 
 }
 
