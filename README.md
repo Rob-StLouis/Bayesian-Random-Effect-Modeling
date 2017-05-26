@@ -6,4 +6,4 @@ Will include:
 3. Example of using mixture models in a hierarchical context
 4. Demonstration of the value of random effect modeling.
 
-The underlying data is from the Beaman, Duflo, Pande, and Topalova (2012) study, which is available on [Harvard's Datavese](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PXV79W).
+The data is from the Beaman, Duflo, Pande, and Topalova (2012) study, which is available on [Harvard's Datavese](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PXV79W).
